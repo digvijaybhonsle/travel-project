@@ -7,10 +7,10 @@ import phone from "../assets/phone.png";
 
 const ContactUs = () => {
   return (
-    <div className="px-6 py-12 max-w-7xl mx-auto">
+    <div className="px-4 sm:px-6 py-12 max-w-7xl mx-auto">
       {/* Top Header Section */}
-      <div className="flex items-center justify-center mb-10">
-        <h1 className="font-purpleplus text-[32px] sm:text-[40px] font-bold">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 text-center sm:text-left">
+        <h1 className="font-purpleplus text-[28px] sm:text-[36px] md:text-[42px] font-bold">
           Feel Free to Contact Us
         </h1>
         <img
@@ -22,24 +22,24 @@ const ContactUs = () => {
       </div>
 
       {/* Form Section */}
-      <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8">
-        {/* Left Empty or Optional Description Section */}
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
+        {/* Left Description Section */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <p className="text-gray-600 text-lg font-inter">
+          <p className="text-gray-600 text-base sm:text-lg font-inter">
             We would love to hear from you. Fill out the form and our team will
             get back to you as soon as possible!
           </p>
         </div>
 
         {/* Right Form Section */}
-        <form className="w-full lg:w-1/2 space-y-4 bg-black py-8 px-6">
+        <form className="w-full lg:w-1/2 space-y-4 bg-black py-8 px-6 rounded-xl shadow-md">
           {/* Name */}
           <div className="flex items-center border rounded-md px-3 py-2 bg-white">
             <img src={nameIcon} alt="Name" className="w-6 h-6 mr-3" />
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full outline-none"
+              className="w-full outline-none text-sm sm:text-base"
             />
           </div>
 
@@ -49,7 +49,7 @@ const ContactUs = () => {
             <input
               type="text"
               placeholder="Mobile Number"
-              className="w-full outline-none"
+              className="w-full outline-none text-sm sm:text-base"
             />
           </div>
 
@@ -59,7 +59,7 @@ const ContactUs = () => {
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full outline-none"
+              className="w-full outline-none text-sm sm:text-base"
             />
           </div>
 
@@ -68,14 +68,14 @@ const ContactUs = () => {
             <img src={pencil} alt="Message" className="w-6 h-6 mr-3 mt-1" />
             <textarea
               placeholder="Your Message"
-              className="w-full outline-none resize-none"
+              className="w-full outline-none resize-none text-sm sm:text-base"
               rows={4}
             />
           </div>
 
           {/* Submit Button */}
-          <div className="text-center lg:text-right">
-            <button className="w-full h-[40px] bg-black text-white rounded-md font-semibold hover:bg-white hover:text-black transition border border-white">
+          <div className="text-center sm:text-right">
+            <button className="w-full sm:w-auto px-6 py-2 bg-black text-white rounded-md font-semibold hover:bg-white hover:text-black transition border border-white">
               Submit
             </button>
           </div>

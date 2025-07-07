@@ -18,22 +18,24 @@ const PopularSection = () => {
   ];
 
   return (
-    <div className="pt-24 px-6 text-start max-w-6xl mx-auto pb-6">
+    <div
+      id="popular-tours"
+      className="pt-20 sm:pt-24 px-4 sm:px-6 lg:px-10 text-start max-w-7xl mx-auto pb-10"
+    >
       {/* Section Heading */}
-      <p className="font-inter font-normal text-[40px] leading-[1] tracking-normal text-black">
+      <p className="font-inter font-semibold text-[32px] sm:text-[40px] leading-tight text-black">
         POPULAR Destinations
       </p>
-      <p className="font-inter font-normal text-base leading-snug mt-4 text-[#444]">
-        Where divinity meets the mountains, rivers sing serenity, and every
-        path leads to peace,
-        <br />
+      <p className="font-inter text-base sm:text-lg text-[#444] mt-3 sm:mt-4">
+        Where divinity meets the mountains, rivers sing serenity, and every path leads to peace,
+        <br className="hidden sm:block" />
         adventure, and soul-stirring moments.
       </p>
 
-      {/* Category Buttons + Cards */}
-      <div className="bg-[#D9D9D9] my-6 rounded-2xl py-6 px-4">
+      {/* Category Buttons + Cards Container */}
+      <div className="bg-[#D9D9D9] my-6 sm:my-10 rounded-2xl py-6 px-4 sm:px-6">
         {/* Category Buttons */}
-        <div className="flex gap-4 mb-8 justify-start flex-wrap">
+        <div className="flex flex-wrap gap-3 sm:gap-4 mb-8">
           {items.map((item, idx) => (
             <button
               key={idx}
@@ -44,15 +46,11 @@ const PopularSection = () => {
           ))}
         </div>
 
-        {/* Card Section */}
-        <div className="flex overflow-x-auto gap-6 scrollbar-hide">
+        {/* Card Section (Responsive scroll on mobile) */}
+        <div className="flex overflow-x-auto gap-6 scrollbar-hide sm:flex-wrap sm:justify-start">
           {destinations.map((dest, i) => (
-            <div key={i} className="flex-shrink-0">
-              <Card
-                image={dest.image}
-                title={dest.title}
-                location={dest.location}
-              />
+            <div key={i} className="flex-shrink-0 w-[260px] sm:w-[48%] md:w-[30%] lg:w-[23%]">
+              <Card image={dest.image} title={dest.title} location={dest.location} />
             </div>
           ))}
         </div>

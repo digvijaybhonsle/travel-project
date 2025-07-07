@@ -30,7 +30,7 @@ const TransportSection = ({ Slidder }) => {
   }, [centerIndex]);
 
   return (
-    <div className="py-16 relative">
+    <div id="about-us" className="py-16 relative">
       <div className="flex flex-col items-center justify-center">
         <h1 className="font-bold font-poppins text-[30px] text-center">
           Our Transport Services
