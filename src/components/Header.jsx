@@ -17,7 +17,7 @@ const Header = () => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false); 
+      setMenuOpen(false);
     }
   };
 
@@ -37,15 +37,15 @@ const Header = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); 
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header className="w-full fixed top-0 left-0 z-50 bg-transparent backdrop-blur-none">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between bg-transparent">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-0 flex items-center justify-between bg-transparent">
         {/* Logo */}
-        <img src={logo} alt="Logo" className="h-16 w-auto" />
+        <img src={logo} alt="Logo" className="h-24 w-24 object-contain" />
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">

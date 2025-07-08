@@ -4,13 +4,17 @@ import pencil from "../assets/pencil.png";
 import email from "../assets/email2.png";
 import nameIcon from "../assets/name.png";
 import phone from "../assets/phone.png";
+import groupimg from "../assets/groupimg.png";
 
 const ContactUs = () => {
   return (
-    <div className="px-4 sm:px-6 py-12 max-w-7xl mx-auto">
+    <div
+      className="px-4 sm:px-6 py-12 max-w-7xl mx-auto bg-cover bg-no-repeat bg-center"
+      style={{ backgroundImage: `url(${groupimg})` }}
+    >
       {/* Top Header Section */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 text-center sm:text-left">
-        <h1 className="font-purpleplus text-[28px] sm:text-[36px] md:text-[42px] font-bold">
+        <h1 className="font-purpleplus text-[28px] sm:text-[36px] md:text-[42px] font-bold text-black drop-shadow-md">
           Feel Free to Contact Us
         </h1>
         <img
@@ -22,17 +26,16 @@ const ContactUs = () => {
       </div>
 
       {/* Form Section */}
-      <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
+      <div className="flex flex-col lg:flex-row justify-between items-start gap-10 bg-opacity-90 p-6 rounded-xl">
         {/* Left Description Section */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <p className="text-gray-600 text-base sm:text-lg font-inter">
-            We would love to hear from you. Fill out the form and our team will
-            get back to you as soon as possible!
+          <p className="text-white text-base sm:text-lg font-inter">
+            We would love to hear from you.
           </p>
         </div>
 
         {/* Right Form Section */}
-        <form className="w-full lg:w-1/2 space-y-4 bg-black py-8 px-6 rounded-xl shadow-md">
+        <form className="w-full lg:w-1/2 space-y-4 bg-black px-6 py-14">
           {/* Name */}
           <div className="flex items-center border rounded-md px-3 py-2 bg-white">
             <img src={nameIcon} alt="Name" className="w-6 h-6 mr-3" />
@@ -75,7 +78,7 @@ const ContactUs = () => {
 
           {/* Submit Button */}
           <div className="text-center sm:text-right">
-            <button className="w-full sm:w-auto px-6 py-2 bg-black text-white rounded-md font-semibold hover:bg-white hover:text-black transition border border-white">
+            <button className="w-full px-6 py-2 bg-black text-white rounded-md font-semibold hover:bg-white hover:text-black transition border border-white">
               Submit
             </button>
           </div>
