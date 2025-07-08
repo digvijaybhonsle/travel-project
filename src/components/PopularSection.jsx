@@ -47,7 +47,7 @@ const PopularSection = () => {
         </div>
 
         {/* Card Section (Responsive scroll on mobile) */}
-        <div className="flex overflow-x-auto gap-6 scrollbar-hide sm:flex-wrap sm:justify-start">
+        <div className="flex overflow-x-auto gap-6 scrollbar-hide">
           {destinations.map((dest, i) => (
             <div key={i} className="flex-shrink-0 w-[260px] sm:w-[48%] md:w-[30%] lg:w-[23%]">
               <Card image={dest.image} title={dest.title} location={dest.location} />

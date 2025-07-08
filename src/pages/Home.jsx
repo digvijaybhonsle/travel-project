@@ -40,7 +40,9 @@ const Home = () => {
         style={{ backgroundImage: `url(${Background})` }}
       >
         <Header />
-        <Scroltext />
+        <div className="pt-[90px]">
+            <Scroltext />
+        </div>
 
         {/* Hero Content */}
         <div className="h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 -mt-10 gap-6 relative z-10">

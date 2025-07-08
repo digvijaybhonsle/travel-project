@@ -17,7 +17,7 @@ const Header = () => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false); // Close mobile menu after click
+      setMenuOpen(false); 
     }
   };
 
@@ -42,7 +42,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="w-full fixed top-0 left-0 z-50 bg-transparent md:bg-transparent">
+    <header className="w-full fixed top-0 left-0 z-50 bg-transparent backdrop-blur-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between bg-transparent">
         {/* Logo */}
         <img src={logo} alt="Logo" className="h-16 w-auto" />
@@ -78,7 +78,7 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white px-6 pb-4 shadow-lg">
+        <div className="md:hidden bg-white/90 backdrop-blur-md px-6 pb-4">
           <ul className="flex flex-col gap-4 font-medium">
             {items.map((item, index) => (
               <li
