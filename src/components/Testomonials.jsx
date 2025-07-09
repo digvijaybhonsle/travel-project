@@ -14,19 +14,19 @@ const testimonials = [
   },
   {
     image: person2,
-    name: "Ankita Sharma",
+    name: "Anjali R",
     review: "A smooth experience from booking to return. Amazing hospitality!",
     rating: "⭐⭐⭐⭐",
   },
   {
     image: person3,
-    name: "Rahul Mehta",
+    name: "Priya Sharma",
     review: "A trip to remember! Thank you for the incredible planning.",
     rating: "⭐⭐⭐⭐",
   },
   {
     image: person4,
-    name: "Priya Singh",
+    name: "Neha Kulkarni",
     review: "Beautiful destinations and very well managed services. Loved it!",
     rating: "⭐⭐⭐⭐⭐",
   },
