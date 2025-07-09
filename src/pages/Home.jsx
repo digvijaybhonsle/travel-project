@@ -40,13 +40,11 @@ const Home = () => {
         style={{ backgroundImage: `url(${Background})` }}
       >
         <Header />
-        <div className="pt-[90px]">
-            <Scroltext />
-        </div>
+        <Scroltext />
 
         {/* Hero Content */}
         <div className="h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 -mt-10 gap-6 relative z-10">
-          <p className="quote-text pb-6 text-white text-[24px] sm:text-[30px] md:text-[36px] leading-snug font-semibold">
+          <p className="quote-text pb-6 text-white font-semibold">
             <span className="block">Every Journey</span>
             <span className="block">
               Begins with a <span className="text-yellow-400">smile</span>,

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FaArrowRight, FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom"
 
 const Card = ({ image, title, location = "" }) => {
-  const [city = "", country = ""] = location.split(",");
+  const [city = "", country = ""] = (location || "").split(",");
   const [liked, setLiked] = useState(false);
 
   return (
@@ -36,7 +37,7 @@ const Card = ({ image, title, location = "" }) => {
         </div>
 
         {/* Arrow Icon */}
-        <FaArrowRight className="text-gray-500 hover:text-black text-md cursor-pointer" />
+        <Link to="/detail"><FaArrowRight className="text-gray-500 hover:text-black text-md cursor-pointer" /></Link>
       </div>
     </div>
   );
