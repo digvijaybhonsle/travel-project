@@ -35,7 +35,7 @@ const ContactUs = () => {
         </div>
 
         {/* Right Form Section */}
-        <form className="w-full lg:w-1/2 space-y-4 bg-black px-6 py-14">
+        <form className="w-full lg:w-1/2 space-y-4 bg-black px-4 py-14">
           {/* Name */}
           <div className="flex items-center border rounded-md px-3 py-2 bg-white">
             <img src={nameIcon} alt="Name" className="w-6 h-6 mr-3" />

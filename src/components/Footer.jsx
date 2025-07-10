@@ -25,8 +25,12 @@ const Footer = () => {
         {/* Policies */}
         <div className="flex flex-col gap-2">
           <h2 className="font-bold text-lg mb-2">Policies</h2>
-          <p className="text-sm hover:underline cursor-pointer">Refund Policy</p>
-          <p className="text-sm hover:underline cursor-pointer">Cancellation Policy</p>
+          <p className="text-sm hover:underline cursor-pointer">
+            Refund Policy
+          </p>
+          <p className="text-sm hover:underline cursor-pointer">
+            Cancellation Policy
+          </p>
         </div>
 
         {/* Contact */}
@@ -36,24 +40,75 @@ const Footer = () => {
           <p className="text-sm">connect@mytour.com</p>
         </div>
 
-        {/* Social Media */}
-        <div className="flex flex-col items-center sm:items-start">
-          <p className="text-sm uppercase tracking-wider text-gray-300 mb-4">Follow Us</p>
-          <div className="flex gap-1">
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src={insta} alt="Instagram" className="w-6 h-6" />
+        <div className="flex items-center justify-center gap-1 sm:gap-5">
+          {/* FOLLOW US vertically */}
+          <div className="flex flex-col items-center space-y-1 sm:space-y-2">
+            {"FOLLOW US".split("").map((letter, index) => (
+              <span
+                key={index}
+                className="text-sm font-semibold text-gray-500 tracking-widest"
+              >
+                {letter}
+              </span>
+            ))}
+          </div>
+
+          {/* Social Media Icons vertically */}
+          <div className="flex flex-col items-center gap-1">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={insta}
+                alt="Instagram"
+                className="w-6 h-6 hover:scale-110 transition-transform"
+              />
             </a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src={facebook} alt="Facebook" className="w-6 h-6" />
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={facebook}
+                alt="Facebook"
+                className="w-6 h-6 hover:scale-110 transition-transform"
+              />
             </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src={twitter} alt="Twitter" className="w-6 h-6" />
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={twitter}
+                alt="Twitter"
+                className="w-6 h-6 hover:scale-110 transition-transform"
+              />
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <img src={linkedin} alt="LinkedIn" className="w-6 h-6" />
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={linkedin}
+                alt="LinkedIn"
+                className="w-6 h-6 hover:scale-110 transition-transform"
+              />
             </a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-              <img src={youtube} alt="YouTube" className="w-6 h-6" />
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={youtube}
+                alt="YouTube"
+                className="w-6 h-6 hover:scale-110 transition-transform"
+              />
             </a>
           </div>
         </div>

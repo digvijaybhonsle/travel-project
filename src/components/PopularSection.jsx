@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import Card from "../components/Card";
 import card1 from "../assets/card1.jpg";
 import card2 from "../assets/card2.jpg";
@@ -7,6 +7,7 @@ import card4 from "../assets/card4.jpg";
 
 const PopularSection = () => {
   const items = ["Adventure", "Culture", "Wildlife", "Mountains", "Luxury"];
+  const [activeCategory, setActiveCategory] = useState("Adventure");
 
   const destinations = [
     { image: card1, title: "Kedarnath", location: "Uttarakhand, India" },
@@ -20,14 +21,15 @@ const PopularSection = () => {
   return (
     <div
       id="popular-tours"
-      className="pt-20 sm:pt-24 px-4 sm:px-6 lg:px-10 text-start max-w-7xl mx-auto pb-10"
+      className="pt-20 sm:pt-24 px-4 sm:px-6 lg:px-10 text-start max-w-7xl mx-auto"
     >
       {/* Section Heading */}
       <p className="font-inter font-semibold text-[32px] sm:text-[40px] leading-tight text-black">
         POPULAR Destinations
       </p>
-      <p className="font-inter text-base sm:text-lg text-[#444] mt-3 sm:mt-4">
-        Where divinity meets the mountains, rivers sing serenity, and every path leads to peace,
+      <p className="font-inter text-base sm:text-lg text-[#444] mt-1 sm:mt-3">
+        Where divinity meets the mountains, rivers sing serenity, and every path
+        leads to peace,
         <br className="hidden sm:block" />
         adventure, and soul-stirring moments.
       </p>
@@ -39,7 +41,12 @@ const PopularSection = () => {
           {items.map((item, idx) => (
             <button
               key={idx}
-              className="px-4 py-2 border border-gray-300 rounded-full text-sm hover:bg-black hover:text-white transition"
+              onClick={() => setActiveCategory(item)}
+              className={`px-4 py-2 border rounded-full text-sm transition ${
+                activeCategory === item
+                  ? "bg-black text-white border-black"
+                  : "border-gray-300 text-gray-700 hover:bg-black hover:text-white"
+              }`}
             >
               {item}
             </button>
@@ -47,10 +54,14 @@ const PopularSection = () => {
         </div>
 
         {/* Card Section (Responsive scroll on mobile) */}
-        <div className="flex overflow-x-auto gap-6 scrollbar-hide">
+        <div className="flex gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide">
           {destinations.map((dest, i) => (
-            <div key={i} className="flex-shrink-0 w-[260px] sm:w-[48%] md:w-[30%] lg:w-[23%]">
-              <Card image={dest.image} title={dest.title} location={dest.location} />
+            <div key={i} className="flex-shrink-0 w-[260px]">
+              <Card 
+                image={dest.image}
+                title={dest.title}
+                location={dest.location}
+              />
             </div>
           ))}
         </div>
