@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.png";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
 const Header = () => {
@@ -8,8 +8,9 @@ const Header = () => {
     { name: "About Us", id: "about-us" },
     { name: "Popular Tours", id: "popular-tours" },
     { name: "Testimonials", id: "testimonials" },
+    { name: "Check List", id: "checklist"}
   ];
-
+  const delayClasses = ["delay-100", "delay-200", "delay-300", "delay-400"];
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -46,7 +47,11 @@ const Header = () => {
     <header className="w-full z-50 bg-transparent backdrop-blur-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-0 flex items-center justify-between bg-transparent">
         {/* Logo */}
-        <img src={logo} alt="Logo" className="h-24 w-24 object-cover object-center rounded-full" />
+        <img
+          src={logo}
+          alt="Logo"
+          className="h-24 w-24 object-cover object-center rounded-full"
+        />
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
@@ -55,14 +60,17 @@ const Header = () => {
               <li
                 key={index}
                 onClick={() => handleScroll(item.id)}
-                className={`cursor-pointer hover:text-black transition ${
+                className={`cursor-pointer opacity-0 animate-slideIn transition-all duration-700 ease-out ${
+                  delayClasses[index] || "delay-100"
+                } ${
                   activeSection === item.id ? "text-black" : "text-[#605F64]"
-                }`}
+                } hover:text-black`}
               >
                 {item.name}
               </li>
             ))}
           </ul>
+
           <button className="ml-4 bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition">
             Get a Quote
           </button>

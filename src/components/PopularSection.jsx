@@ -21,13 +21,13 @@ const PopularSection = () => {
   return (
     <div
       id="popular-tours"
-      className="pt-20 sm:pt-24 px-4 sm:px-6 lg:px-10 text-start max-w-7xl mx-auto pb-10"
+      className="pt-20 sm:pt-24 px-4 sm:px-6 lg:px-10 text-start max-w-7xl mx-auto"
     >
       {/* Section Heading */}
       <p className="font-inter font-semibold text-[32px] sm:text-[40px] leading-tight text-black">
         POPULAR Destinations
       </p>
-      <p className="font-inter text-base sm:text-lg text-[#444] mt-3 sm:mt-4">
+      <p className="font-inter text-base sm:text-lg text-[#444] mt-1 sm:mt-3">
         Where divinity meets the mountains, rivers sing serenity, and every path
         leads to peace,
         <br className="hidden sm:block" />

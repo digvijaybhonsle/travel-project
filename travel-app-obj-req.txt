@@ -1,0 +1,45 @@
+{
+  "id": "kedarnath-journey",
+  "title": "Call of Kedarnath: Journey to the Abode of Shiva",
+  "location": "Kedarnath, Uttarakhand, India",
+  "categories": ["Adventure", "Mountains", "Spiritual"],
+  "short_description": "Embark on a soul-stirring pilgrimage to the sacred Kedarnath Temple nestled in the heart of the Himalayas...",
+  "full_description": "Tour and travel services in Kedarnath offer complete pilgrimage packages including transportation, accommodation, guided treks...",
+  "duration_days": 7,
+  "places_covered": 5,
+  "price_per_person": 24999,
+  "currency": "INR",
+  "tags": ["Hotels & Stays", "Adventure", "Spiritual"],
+  "thumbnail": "https://cdn.example.com/images/kedarnath/thumb.jpg",
+  "images": {
+    "cover": "https://cdn.example.com/images/kedarnath/cover.jpg",
+    "gallery": [
+      "https://cdn.example.com/images/kedarnath/1.jpg",
+      "https://cdn.example.com/images/kedarnath/2.jpg",
+      "https://cdn.example.com/images/kedarnath/3.jpg",
+      "https://cdn.example.com/images/kedarnath/4.jpg"
+    ]
+  },
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival in Haridwar",
+      "date": "2025-07-18",
+      "summary": "Arrive at Haridwar Railway Station",
+      "details": "Attend the Ganga Aarti at Har Ki Pauri or visit Laxman Jhula. Overnight stay arranged.",
+      "highlight": true
+    },
+    {
+      "day": 2,
+      "title": "Haridwar to Guptkashi",
+      "summary": "Drive through scenic hills",
+      "details": "Stop at Rudraprayag, stay at Guptkashi hotel."
+    }
+    // ...more days
+  ],
+  "booking": {
+    "is_available": true,
+    "book_url": "https://yourtravelapp.com/book/kedarnath-journey"
+  },
+  "is_popular": true
+}
