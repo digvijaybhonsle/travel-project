@@ -34,40 +34,35 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div id="testimonials" className="px-12 py-16 bg-gray-50 text-start">
+    <div id="testimonials" className="px-4 sm:px-12 py-16 bg-gray-50 text-start">
       <h1 className="text-3xl sm:text-4xl font-bold mb-2 font-poppins">
         Our Testimonials
       </h1>
-      <div className="w-[204px] h-[8px] bg-black mb-10 rounded-full"></div>
+      <div className="w-[160px] sm:w-[204px] h-[6px] sm:h-[8px] bg-black mb-10 rounded-full"></div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {testimonials.map((t, index) => (
           <div
             key={index}
-            className="bg-black text-white p-6 rounded-xl shadow-md text-left flex flex-col items-center"
+            className="bg-black text-white p-6 rounded-xl shadow-md flex flex-col"
           >
-            <div
-              key={index}
-              className="bg-black text-white p-6 rounded-xl shadow-md text-left flex flex-col"
-            >
-              <div className="flex items-start gap-4">
-                {/* Image */}
-                <img
-                  src={t.image}
-                  alt={t.name}
-                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover"
-                />
+            <div className="flex items-start gap-4">
+              {/* Avatar */}
+              <img
+                src={t.image}
+                alt={t.name}
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover"
+              />
 
-                {/* Text Content */}
-                <div>
-                  <p className="text-yellow-400 text-lg sm:text-xl">
-                    {t.rating}
-                  </p>
-                  <h3 className="font-semibold text-base sm:text-lg mt-1">
-                    {t.name}
-                  </h3>
-                  <p className="text-sm text-gray-300 mt-2">{t.review}</p>
-                </div>
+              {/* Content */}
+              <div className="flex-1">
+                <p className="text-yellow-400 text-lg sm:text-xl">
+                  {t.rating}
+                </p>
+                <h3 className="font-semibold text-base sm:text-lg mt-1">
+                  {t.name}
+                </h3>
+                <p className="text-sm text-gray-300 mt-2">{t.review}</p>
               </div>
             </div>
           </div>
