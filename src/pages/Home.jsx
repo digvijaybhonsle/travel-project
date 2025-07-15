@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "../components/Header";
 import Background from "../assets/background.jpg";
 import Scroltext from "../components/Scroltext";
@@ -9,7 +10,7 @@ import check from "../assets/shieldcheck.png";
 import bottomimg from "../assets/bottom.png";
 import centerimg from "../assets/sliddercenter.png";
 import leftimg from "../assets/leftimg.png";
-import leftmosting from "../assets/leftmostimg.png";
+import leftmostimg from "../assets/leftmostimg.png";
 import rightimg from "../assets/rightimg.png";
 import rightmostimg from "../assets/rightmost.png";
 import TransportSection from "../components/TransportationSection";
@@ -26,7 +27,7 @@ import youtube from "../assets/youtube.png";
 
 const Home = () => {
   const Slidder = [
-    { image: leftmosting },
+    { image: leftmostimg },
     { image: leftimg },
     { image: centerimg },
     { image: rightimg },
@@ -58,25 +59,8 @@ const Home = () => {
 
           <Searchbar />
 
-          {/* Social Icons */}
-          <div className="absolute right-4 sm:right-10 top-[70%] -translate-y-1/2 flex flex-col gap-4 z-20">
-            {[insta, facebook, linkedin, youtube].map((icon, index) => (
-              <a
-                href="#"
-                key={index}
-                className="hover:scale-110 transition-transform duration-200"
-              >
-                <img
-                  src={icon}
-                  alt={`social-${index}`}
-                  className="w-5 h-5 sm:w-6 sm:h-6"
-                />
-              </a>
-            ))}
-          </div>
-
           {/* Feature Highlights */}
-          <div className="flex flex-wrap gap-3 sm:gap-6 pt-4 justify-center">
+          <div className="quote-texts flex flex-wrap gap-3 sm:gap-6 pt-4 justify-center relative z-20">
             {[
               { icon: google, text: "4.8 ⭐ Rating" },
               { icon: aeroplane, text: "100+ Trips" },
@@ -91,6 +75,40 @@ const Home = () => {
                 </div>
                 <p>{item.text}</p>
               </div>
+            ))}
+          </div>
+
+          {/* Social Icons - Mobile (Below features) */}
+          <div className="flex sm:hidden gap-4 justify-center pt-2">
+            {[insta, facebook, linkedin, youtube].map((icon, index) => (
+              <a
+                href="#"
+                key={index}
+                className="hover:scale-110 transition-transform duration-200"
+              >
+                <img
+                  src={icon}
+                  alt={`social-${index}`}
+                  className="w-6 h-6"
+                />
+              </a>
+            ))}
+          </div>
+
+          {/* Social Icons - Desktop/Tablet (Floating right) */}
+          <div className="hidden sm:flex absolute right-4 sm:right-10 top-[70%] -translate-y-1/2 flex-col gap-4 z-20">
+            {[insta, facebook, linkedin, youtube].map((icon, index) => (
+              <a
+                href="#"
+                key={index}
+                className="hover:scale-110 transition-transform duration-200"
+              >
+                <img
+                  src={icon}
+                  alt={`social-${index}`}
+                  className="w-5 h-5 sm:w-6 sm:h-6"
+                />
+              </a>
             ))}
           </div>
         </div>
